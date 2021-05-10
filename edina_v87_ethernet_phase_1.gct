@@ -23,7 +23,7 @@ HIT enter
 HIT enter
 
 # Wait 3 seconds for "Google Terms of Service" prompt
-WAIT 3000
+WAIT 4000
 
 # Accept Google ToS
 # Defer update by hitting "enterprise enrollment" key combo
@@ -41,10 +41,10 @@ HIT enter
 WAIT 5000
 
 # Type CB enrollment email from "enrollment email" variable
-# Wait 2 seconds to allow for password prompt
+# Wait45 seconds to allow for password prompt
 VWRITE ENREMAIL
 HIT enter
-WAIT 2000
+WAIT 4000
 
 # Type CB enrollment password from enrollment password variable
 VWRITE ENRPW

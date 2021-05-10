@@ -22,30 +22,30 @@ HIT enter
 # Click "done" button
 HIT enter
 
-# Wait 3.5 seconds for login screen
-WAIT 3500
+# Wait 5 seconds for login screen
+WAIT 5000
 
 # Click "sign in with different account"
 CLICK left
 HIT tab
 HIT enter
 
-# Wait 5 seconds for email prompt
-WAIT 5000
+# Wait 6 seconds for email prompt
+WAIT 6000
 
 # Enter CB email
 VWRITE USREMAIL
 HIT enter
 
-# Wait 6 seconds for password prompt
-WAIT 6000
+# Wait 8 seconds for password prompt
+WAIT 8000
 
 # Enter CB password
 VWRITE USRPW
 HIT enter
 
-# Wait 18 seconds to log in
-WAIT 18000
+# Wait 20 seconds to log in
+WAIT 20000
 
 # Open settings window
 HIT alt lshift s
