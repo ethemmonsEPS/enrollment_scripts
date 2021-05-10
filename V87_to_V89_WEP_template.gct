@@ -1,0 +1,70 @@
+VAR WFSSID,WFPW,ADVWFUSR,ADVWFPW,WFXA,WFXB,ENREMAIL,ENRPW,USREMAIL,USRPW
+BEGIN
+# NOTE DO NOT MAKE ANY CHANGES TO THE FIRST LINE (Variables)
+WAIT 4000
+
+# These first two commands set the starting position for the automation
+# If developer console is enabled this will result in a failed enrollment
+CLICK left
+HIT tab
+
+# Opens Wifi menu, enters your network credentials, and connects to Wifi
+HIT alt shift s
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT enter
+HIT tab
+HIT tab
+HIT tab
+HIT enter
+VWRITE WFSSID
+HIT tab
+# Default Wifi security is 'None', hit down once for 'WEP'
+# Hit down twice for 'PSK'
+HIT down
+HIT down
+HIT tab
+VWRITE WFPW
+HIT enter
+# 30 sec timer for connecting to Wi-Fi, this can be adjusted as needed
+WAIT 30000
+
+# Selects "Let's Go", which brings up the 'Connect to Network' menu
+HIT tab
+HIT tab
+HIT enter
+
+# 10 sec timer for 'Connect to Network' menu, this can be adjusted as needed
+WAIT 10000
+HIT enter
+
+# 5-second timer for 'Google Chrome OS terms' menu, this can be adjusted as needed
+WAIT 5000
+
+# Selects "Accept and continue" for terms of service
+# Next command (ctrl atl e) is to skip the update screen
+# Remove if an update is needed and increase WAIT time
+# shift tabs and normal tabs used to navigate through Terms and conditions
+HIT shift tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT ctrl alt e
+HIT enter
+# 10 sec timer for bypassing update screen, this can be adjusted as needed
+WAIT 10000
+
+# This part is for Brand new Chromebooks with first time enrollments
+# Enters your google domain credentials
+VWRITE ENREMAIL
+HIT enter
+# 8 sec timer for enrollment email, this can be adjusted as needed
+WAIT 8000
+VWRITE ENRPW
+HIT enter
+END

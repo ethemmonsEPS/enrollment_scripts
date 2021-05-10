@@ -1,0 +1,16 @@
+{
+    "name": "edina_cred",
+    "params": {
+       "WFSSID": "SSID",
+       "WFPW" : "SSID_Password",
+       "ADVWFUSR" : "Advanced WiFi UserName",
+       "ADVWFPW" : "Advanced WiFi Password",
+       "WFXA" : "WiFi parameter A",
+       "WFXB" : "WiFi parameter B",
+       "ENREMAIL" : "enroll@domain.org",
+       "ENRPW" : "enroll_password",
+       "USREMAIL" : "dummy_login@domain.com",
+       "USRPW" : "dummy_login_password",
+       "LOC" : "Stock"
+      }
+}
