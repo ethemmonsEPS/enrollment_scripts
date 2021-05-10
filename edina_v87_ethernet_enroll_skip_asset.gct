@@ -1,0 +1,174 @@
+VAR ENREMAIL,ENRPW,USREMAIL,USRPW
+BEGIN
+# VAR and BEGIN must be the first 2 lines of the script
+
+# This script was written for v87 Chromebook enrollment (5/10/21)
+
+# This script will enroll a Chromebook on the "Welcome" out-of-box screen, then check for ChromeOS updates and
+# 	bring up hardware testing webpages for microphone, webcam, keyboard, and speaker (Sesame Street on Youtube).
+
+# The asset ID and location fields will be LEFT AS IS meaning if there is no asset ID already associated with the device,
+# 	then the asset ID will have to be added after enrollment via Google Control Panel.
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~ PHASE 1 - Enrolling ~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Wait 4 seconds to allow for any USB setup shenanigans
+WAIT 4000
+
+# Set starting position 
+CLICK left
+HIT tab
+
+# Move to "Let's go" button and click it
+HIT tab
+HIT tab
+HIT enter
+
+# Click the "Next" button because device should be connected to ethernet
+HIT enter
+
+# Wait 4 seconds for "Google Terms of Service" prompt
+WAIT 4000
+
+# Accept Google ToS
+# Defer update by hitting "enterprise enrollment" key combo
+HIT shift tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT ctrl alt e
+HIT enter
+
+# Wait 5 seconds for "Enterprise Enrollment" prompt
+WAIT 5000
+
+# Type CB enrollment email from "enrollment email" variable
+# Wait 4 seconds to allow for password prompt
+VWRITE ENREMAIL
+HIT enter
+WAIT 4000
+
+# Type CB enrollment password from enrollment password variable
+VWRITE ENRPW
+HIT enter
+
+# Wait 10 seconds for enrollment to finish
+WAIT 10000
+
+# Submit empty asset ID and location field data
+HIT tab
+HIT tab
+HIT tab
+HIT enter
+
+# Click "done" button
+HIT enter
+
+# Wait 5 seconds for login screen
+WAIT 5000
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~ PHASE 2 - Updating and testing ~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Click "sign in with different account"
+HIT shift tab
+HIT shift tab
+HIT enter
+
+# Wait 5 seconds for email prompt
+WAIT 5000
+
+# Enter CB email
+VWRITE USREMAIL
+HIT enter
+
+# Wait 6 seconds for password prompt
+WAIT 6000
+
+# Enter CB password
+VWRITE USRPW
+HIT enter
+
+# Wait 20 seconds to log in
+WAIT 20000
+
+# Open settings window
+HIT alt lshift s
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT enter
+
+# Navigate to "About Chrome OS"
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT enter
+
+# Click "Check for updates"
+HIT tab
+HIT enter
+
+# Open Google Chrome window
+HIT win
+WRITE chrome
+HIT enter
+
+# Open webcam testing site
+HIT lctrl t
+WRITE webcamtests.com
+HIT enter
+
+# Open microphone testing site
+HIT lctrl t
+WRITE mictests.com
+HIT enter
+
+# Open Youtube and test audio
+HIT lctrl t
+WRITE youtube.com/watch?v=Mh85R-S-dh8
+HIT enter
+HIT alt lshift s
+HIT lshift tab
+HIT lshift tab
+HIT lshift tab
+HIT lshift tab
+HIT lshift tab
+HIT left
+HIT left
+HIT left
+HIT left
+HIT left
+HIT left
+HIT left
+HIT left
+HIT left
+HIT left
+HIT right
+HIT right
+HIT right
+HIT right
+HIT right
+HIT esc
+
+# Open keyboard testing site
+HIT lctrl t
+WRITE keyboardchecker.com
+HIT enter
+
+END
