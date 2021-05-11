@@ -2,10 +2,13 @@ VAR ENREMAIL,ENRPW
 BEGIN
 # VAR and BEGIN must be the first 2 lines of the script
 
-# ~~~PHASE 1 SCRIPT~~~
-# Date last modified - 5/11/21
+# PHASE 1 SCRIPT
+# DATE LAST MODIFIED--5/11/21
+# DESCRIPTION--This script will bring the Chromebook from the "Welcome" OOBE screen to the "Enter Asset ID/location" prompt
+
+# REQUIREMENTS
 # This script was written for Chromebook shipped with ChromeOS v87 out of the box
-# This script will bring the chromebook from the "Welcome" OOBE screen to the "Enter Asset ID/location" prompt
+# THE CHROMEBOOK MUST USE AN ETHERNET CONNECTION TO OPERATE AS INTENDED
 # THE ASSET ID AND/OR LOCATIOn WILL HAVE TO BE MANUALLY ENTERED ONCE THIS SCRIPT FINISHES
 
 # Wait 2 seconds to allow for any USB setup shenanigans

@@ -2,10 +2,15 @@ VAR USREMAIL,USRPW
 BEGIN
 # VAR and BEGIN must be the first 2 lines of the script
 
-# ~~~PHASE 2 SCRIPT~~~
-# This script was written for v87 Chromebook enrollment (5/7/21)
-# The Chromebook should be on the asset ID prompt with the asset number typed in and
-#   the cursor placed on the prompt but not over any text boxes or buttons
+# PHASE 2 SCRIPT
+# DATE LAST MODIFIED--5/11/21
+# DESCRIPTION--This script will finish the enrollment process from the asset ID prompt, login, then open up microphone, webcam, keyboard, and speaker testing websites
+
+# REQUIREMENTS
+# This script was written when v87 was what Chromebooks shipped out of the box
+# THE CHROMEBOOK MUST USE AN ETHERNET CONNECTION TO OPERATE AS INTENDED
+# THE ASSET ID MUST ALREADY BE TYPED IN BUT DO NOT LEAVE THE ASSET ID SCREEN
+# THE CURSOR SHOULD NOT BE PLACED OVER ANY TEXT FIELDS OR BUTTONS
 
 # Wait 2 seconds to allow for any USB setup shenanigans
 WAIT 2000
