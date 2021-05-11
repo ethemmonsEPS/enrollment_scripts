@@ -1,0 +1,151 @@
+VAR ENREMAIL,ENRPW,USREMAIL,USRPW
+BEGIN
+# VAR and BEGIN must be the first 2 lines of the script
+
+# Date last modified 5/10/21
+
+# This script will take a powerwashed Chromebook, login, then bring up the microphone, webcam, keyboard, and speaker (Sesame steet on Youtube) testing websites.
+
+# The Chromebook should be on the "Welcome" screen displayed right after a successful powerwash
+
+# Wait 2 seconds to allow for any USB setup shenanigans
+WAIT 2000
+
+# Set starting position
+CLICK left
+HIT tab
+
+# Click "Let's go" button
+HIT tab
+HIT tab
+HIT enter
+
+# Wait 1 second to network options
+WAIT 1000
+
+# Click "Next" button to skip WIFI
+HIT enter
+
+# Wait 4 seconds for "Google Terms of Service" prompt
+WAIT 4000
+
+# Accept Google ToS and trigger enterprise enrollment
+HIT shift tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT ctrl alt e
+HIT enter
+
+# Wait 13 seconds for enrollment to finish
+WAIT 13000
+
+# Click "Done" on enrollment screen
+HIT enter
+
+# Wait 3 seconds for login screen
+WAIT 3000
+
+# Click "Sign in with a different account"
+CLICK left
+HIT shift tab
+HIT enter
+
+# Wait 5 seconds for email prompt
+WAIT 5000
+
+# Enter CB email
+VWRITE USREMAIL
+HIT enter
+
+# Wait 6 seconds for password prompt
+WAIT 6000
+
+# Enter CB password
+VWRITE USRPW
+HIT enter
+
+# Wait 20 seconds to log in
+WAIT 20000
+
+# Open settings window
+HIT alt lshift s
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT enter
+
+# Navigate to About Chrome OS
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT enter
+
+# Click "Check for updates"
+HIT tab
+HIT enter
+
+# Open Google Chrome window
+HIT win
+WAIT 1000
+WRITE chrome
+HIT enter
+
+# Open webcam testing site
+HIT lctrl t
+WRITE webcamtests.com
+HIT enter
+
+# Open microphone testing site
+HIT lctrl t
+WRITE mictests.com
+HIT enter
+
+# Open Youtube and test audio (using Sesame Street's Rubber Ducky song)
+HIT lctrl t
+WRITE youtube.com/watch?v=Mh85R-S-dh8
+HIT enter
+
+# Set volume to 50%
+HIT alt lshift s
+HIT lshift tab
+HIT lshift tab
+HIT lshift tab
+HIT lshift tab
+HIT lshift tab
+HIT left
+HIT left
+HIT left
+HIT left
+HIT left
+HIT left
+HIT left
+HIT left
+HIT left
+HIT left
+HIT right
+HIT right
+HIT right
+HIT right
+HIT right
+HIT right
+HIT esc
+
+# Open keyboard testing site
+HIT lctrl t
+WRITE keyboardchecker.com
+HIT enter
+
+END
