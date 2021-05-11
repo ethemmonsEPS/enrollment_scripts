@@ -2,9 +2,9 @@ VAR USREMAIL,USRPW
 BEGIN
 # VAR and BEGIN must be the first 2 lines of the script
 
-# Date last modified 5/10/21
-# This script will take a powerwashed Chromebook, login, then bring up the microphone, webcam, keyboard, and speaker (Sesame steet on Youtube) testing websites.
-# The Chromebook should be on the "Welcome" screen displayed right after a successful powerwash
+# Date last modified 5/11/21
+# This script will take a powerwashed Chromebook, login, then bring up microphone, webcam, keyboard, and speaker testing websites.
+# The Chromebook must be on the "Welcome" screen displayed after a successful powerwash.
 
 # Wait 2 seconds to allow for any USB setup shenanigans
 WAIT 2000
@@ -112,7 +112,7 @@ HIT lctrl t
 WRITE mictests.com
 HIT enter
 
-# Open Youtube and test audio (using Sesame Street's Rubber Ducky song)
+# Open Youtube and test audio (Sesame Street's Rubber Ducky song)
 HIT lctrl t
 WRITE youtube.com/watch?v=Mh85R-S-dh8
 HIT enter
