@@ -1,4 +1,4 @@
-VAR ENREMAIL,ENRPW,USREMAIL,USRPW
+VAR USREMAIL,USRPW
 BEGIN
 # VAR and BEGIN must be the first 2 lines of the script
 
