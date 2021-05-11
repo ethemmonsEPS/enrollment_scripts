@@ -3,9 +3,7 @@ BEGIN
 # VAR and BEGIN must be the first 2 lines of the script
 
 # Date last modified 5/10/21
-
 # This script will take a powerwashed Chromebook, login, then bring up the microphone, webcam, keyboard, and speaker (Sesame steet on Youtube) testing websites.
-
 # The Chromebook should be on the "Welcome" screen displayed right after a successful powerwash
 
 # Wait 2 seconds to allow for any USB setup shenanigans
@@ -29,7 +27,8 @@ HIT enter
 # Wait 4 seconds for "Google Terms of Service" prompt
 WAIT 4000
 
-# Accept Google ToS and trigger enterprise enrollment
+# Accept Google ToS
+# Defer update by hitting "enterprise enrollment" key combo
 HIT shift tab
 HIT tab
 HIT tab
@@ -46,8 +45,8 @@ WAIT 13000
 # Click "Done" on enrollment screen
 HIT enter
 
-# Wait 3 seconds for login screen
-WAIT 3000
+# Wait 5 seconds for login screen
+WAIT 5000
 
 # Click "Sign in with a different account"
 CLICK left
@@ -117,31 +116,6 @@ HIT enter
 HIT lctrl t
 WRITE youtube.com/watch?v=Mh85R-S-dh8
 HIT enter
-
-# Set volume to 50%
-HIT alt lshift s
-HIT lshift tab
-HIT lshift tab
-HIT lshift tab
-HIT lshift tab
-HIT lshift tab
-HIT left
-HIT left
-HIT left
-HIT left
-HIT left
-HIT left
-HIT left
-HIT left
-HIT left
-HIT left
-HIT right
-HIT right
-HIT right
-HIT right
-HIT right
-HIT right
-HIT esc
 
 # Open keyboard testing site
 HIT lctrl t

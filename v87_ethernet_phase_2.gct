@@ -4,9 +4,11 @@ BEGIN
 
 # ~~~PHASE 2 SCRIPT~~~
 # This script was written for v87 Chromebook enrollment (5/7/21)
+# The Chromebook should be on the asset ID prompt with the asset number typed in and
+#   the cursor placed on the prompt but not over any text boxes or buttons
 
-# Wait 3 seconds to allow for any USB setup shenanigans
-WAIT 3000
+# Wait 2 seconds to allow for any USB setup shenanigans
+WAIT 2000
 
 # Set starting position
 CLICK left
@@ -30,15 +32,15 @@ CLICK left
 HIT tab
 HIT enter
 
-# Wait 6 seconds for email prompt
-WAIT 6000
+# Wait 5 seconds for email prompt
+WAIT 5000
 
 # Enter CB email
 VWRITE USREMAIL
 HIT enter
 
-# Wait 8 seconds for password prompt
-WAIT 8000
+# Wait 6 seconds for password prompt
+WAIT 6000
 
 # Enter CB password
 VWRITE USRPW
@@ -75,6 +77,7 @@ HIT enter
 
 # Open Google Chrome window
 HIT win
+WAIT 1000
 WRITE chrome
 HIT enter
 
@@ -88,32 +91,10 @@ HIT lctrl t
 WRITE mictests.com
 HIT enter
 
-# Open Youtube, lower volume to 0, then raise volume to 50%
+# Open Youtube and test audio (using Sesame Street's Rubber Ducky song)
 HIT lctrl t
 WRITE youtube.com/watch?v=Mh85R-S-dh8
 HIT enter
-HIT alt lshift s
-HIT lshift tab
-HIT lshift tab
-HIT lshift tab
-HIT lshift tab
-HIT lshift tab
-HIT left
-HIT left
-HIT left
-HIT left
-HIT left
-HIT left
-HIT left
-HIT left
-HIT left
-HIT left
-HIT right
-HIT right
-HIT right
-HIT right
-HIT right
-HIT esc
 
 # Open keyboard testing site
 HIT lctrl t

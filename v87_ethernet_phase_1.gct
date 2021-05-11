@@ -7,8 +7,8 @@ BEGIN
 # This script will bring the chromebook from the "Welcome" OOBE screen to the "Enter Asset ID/location" prompt
 # The asset ID will have to be manually entered once this script finishes
 
-# Wait 3 seconds to allow for any USB setup shenanigans
-WAIT 3000
+# Wait 2 seconds to allow for any USB setup shenanigans
+WAIT 2000
 
 # Set starting position 
 CLICK left
@@ -19,10 +19,13 @@ HIT tab
 HIT tab
 HIT enter
 
-# Click the "Next" button because device should be connected to ethernet
+# Wait 1 second to network options
+WAIT 1000
+
+# Click "Next" button to skip WIFI
 HIT enter
 
-# Wait 3 seconds for "Google Terms of Service" prompt
+# Wait 4 seconds for "Google Terms of Service" prompt
 WAIT 4000
 
 # Accept Google ToS
@@ -41,16 +44,16 @@ HIT enter
 WAIT 5000
 
 # Type CB enrollment email from "enrollment email" variable
-# Wait45 seconds to allow for password prompt
 VWRITE ENREMAIL
 HIT enter
+
+# Wait 4 seconds to allow for password prompt
 WAIT 4000
 
 # Type CB enrollment password from enrollment password variable
 VWRITE ENRPW
 HIT enter
 
-# Ending marker for script
 # Chromebook should be displaying the asset ID prompt
 # Unplug USB and set chromebook aside for phase 2 script
 END
