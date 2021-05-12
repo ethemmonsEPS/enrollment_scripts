@@ -82,6 +82,9 @@ HIT tab
 HIT tab
 HIT enter
 
+# Wait 2 seconds for settings window
+WAIT 2000
+
 # Navigate to About Chrome OS
 HIT tab
 HIT tab
