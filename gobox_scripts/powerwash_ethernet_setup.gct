@@ -43,8 +43,8 @@ HIT tab
 HIT ctrl alt e
 HIT enter
 
-# Wait 13 seconds for enrollment to finish
-WAIT 13000
+# Wait 18 seconds for enrollment to finish
+WAIT 18000
 
 # Click "Done" on enrollment screen
 HIT enter
@@ -71,8 +71,8 @@ WAIT 6000
 VWRITE USRPW
 HIT enter
 
-# Wait 20 seconds to log in
-WAIT 20000
+# Wait 23 seconds to log in
+WAIT 23000
 
 # Open settings window
 HIT alt lshift s

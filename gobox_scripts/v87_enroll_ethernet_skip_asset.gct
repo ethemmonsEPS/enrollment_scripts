@@ -48,28 +48,30 @@ HIT tab
 HIT ctrl alt e
 HIT enter
 
-# Wait 5 seconds for "Enterprise Enrollment" prompt
-WAIT 5000
+# Wait 15 seconds for "Enterprise Enrollment" prompt
+WAIT 15000
 
 # Type CB enrollment email from "enrollment email" variable
 VWRITE ENREMAIL
 HIT enter
 
-# Wait 4 seconds to allow for password prompt
-WAIT 4000
+# Wait 6 seconds to allow for password prompt
+WAIT 6000
 
 # Type CB enrollment password from enrollment password variable
 VWRITE ENRPW
 HIT enter
 
-# Wait 13 seconds for enrollment to finish
-WAIT 13000
+# Wait 18 seconds for enrollment to finish
+WAIT 18000
 
 # Submit empty asset ID and location field data
 HIT tab
 HIT tab
 HIT tab
 HIT enter
+
+# Wait 2 seconds to allow for information to send
 
 # Click "done" button
 HIT enter
@@ -82,7 +84,7 @@ WAIT 5000
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Click "sign in with different account"
-HIT shift tab
+CLICK left
 HIT shift tab
 HIT enter
 
@@ -100,8 +102,8 @@ WAIT 6000
 VWRITE USRPW
 HIT enter
 
-# Wait 20 seconds to log in
-WAIT 20000
+# Wait 23 seconds to log in
+WAIT 23000
 
 # Open settings window
 HIT alt lshift s
