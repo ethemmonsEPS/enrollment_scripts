@@ -10,6 +10,7 @@ BEGIN
 # THE CHROMEBOOK MUST USE AN ETHERNET CONNECTION TO OPERATE AS INTENDED
 # The asset ID prompt will be entered with whatever information is already prefilled, if any
 # Asset ID and Location will have to be entered after enrollment using tools such as Google Admin Control Panel (GCP)
+# This script does not work on Chromebooks on v90
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~ PHASE 1 - Enrolling ~~
@@ -103,8 +104,8 @@ WAIT 6000
 VWRITE USRPW
 HIT enter
 
-# Wait 23 seconds to log in
-WAIT 23000
+# Wait 25 seconds to log in
+WAIT 25000
 
 # Open settings window
 HIT alt lshift s

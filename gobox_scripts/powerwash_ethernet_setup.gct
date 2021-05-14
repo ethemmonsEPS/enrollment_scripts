@@ -71,8 +71,8 @@ WAIT 6000
 VWRITE USRPW
 HIT enter
 
-# Wait 23 seconds to log in
-WAIT 23000
+# Wait 25 seconds to log in
+WAIT 25000
 
 # Open settings window
 HIT alt lshift s
