@@ -2,7 +2,7 @@ VAR ENREMAIL,ENRPW,USREMAIL,USRPW
 BEGIN
 # VAR and BEGIN must be the first 2 lines of the script
 
-# DATE LAST MODIFIED--5/11/21
+# DATE LAST MODIFIED--5/14/21
 # DESCRIPTION--This script will enroll a Chromebook on the "Welcome" out-of-box screen, skipping the asset ID section, and open hardware testing webpages for microphone, webcam, keyboard, and speaker
 
 # REQUIREMENTS
@@ -62,8 +62,8 @@ WAIT 6000
 VWRITE ENRPW
 HIT enter
 
-# Wait 18 seconds for enrollment to finish
-WAIT 18000
+# Wait 20 seconds for enrollment to finish
+WAIT 20000
 
 # Submit empty asset ID and location field data
 HIT tab
@@ -72,6 +72,7 @@ HIT tab
 HIT enter
 
 # Wait 2 seconds to allow for information to send
+WAIT 2000
 
 # Click "done" button
 HIT enter
