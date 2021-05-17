@@ -1,0 +1,148 @@
+VAR USREMAIL,USRPW,WFSSID,WFPW
+BEGIN
+# VAR and BEGIN must be the first 2 lines of the script
+
+# DATE LAST MODIFIED
+#   5/17/21
+# DESCRIPTION
+#   This script will take a powerwashed Chromebook, login, then open up microphone, webcam, keyboard, and speaker testing websites
+
+# REQUIREMENTS
+#   The Chromebook must be on the "Welcome" screen displayed after a successful powerwash
+#   THE CHROMEBOOK MUST ALREADY BE APPROVED FOR EDINA-DEVICES TO OPERATE AS INTENDED
+#   The script was written when v89 was the approved ChromeOS version
+#   This script has not been tested on v90
+
+# Wait 2 seconds to allow for any USB setup shenanigans
+WAIT 2000
+
+# Set starting position 
+CLICK left
+
+# Open WIFI menu
+HIT alt shift s
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT enter
+
+# Click "add wifi" button
+HIT tab
+HIT tab
+HIT tab
+HIT enter
+
+# Enter WIFI SSID
+VWRITE WFSSID
+
+# Select PSK (Pre-shared key) for security
+HIT tab
+HIT down
+HIT down
+HIT tab
+
+# Enter WIFI password
+VWRITE WFPW
+HIT enter
+
+# Wait 8 seconds for wifi to connect
+WAIT 8000
+
+# Set starting position
+CLICK left
+HIT tab
+
+# Click "Let's go" button
+HIT tab
+HIT tab
+HIT enter
+
+# Wait 1 second to network options
+WAIT 1000
+
+# Click "Next" button
+HIT enter
+
+# Wait 4 seconds for "Google Terms of Service" prompt
+WAIT 4000
+
+# Accept Google ToS
+# Defer update by hitting "enterprise enrollment" key combo
+HIT shift tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT ctrl alt e
+HIT enter
+
+# Wait 25 seconds for enrollment to finish
+WAIT 25000
+
+# Click "Done" on enrollment screen
+HIT enter
+
+# Wait 5 seconds for login screen
+WAIT 5000
+
+# Click "Sign in with a different account"
+CLICK left
+HIT shift tab
+HIT enter
+
+# Wait 5 seconds for email prompt
+WAIT 5000
+
+# Enter CB email
+VWRITE USREMAIL
+HIT enter
+
+# Wait 6 seconds for password prompt
+WAIT 6000
+
+# Enter CB password
+VWRITE USRPW
+HIT enter
+
+# Wait 30 seconds to log in
+WAIT 30000
+
+# Check for OS updates
+HIT win
+WAIT 2000
+WRITE check for updates
+HIT enter
+WAIT 2000
+HIT enter
+WAIT 2000
+
+# Open Google Chrome window
+HIT win
+WAIT 1000
+WRITE chrome
+HIT enter
+
+# Open webcam testing site
+HIT lctrl t
+WRITE webcamtests.com
+HIT enter
+
+# Open microphone testing site
+HIT lctrl t
+WRITE mictests.com
+HIT enter
+
+# Open Youtube and test audio (Sesame Street's Rubber Ducky song)
+HIT lctrl t
+WRITE youtube.com/watch?v=Mh85R-S-dh8
+HIT enter
+
+# Open keyboard testing site
+HIT lctrl t
+WRITE keyboardchecker.com
+HIT enter
+
+END
