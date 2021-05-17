@@ -9,6 +9,7 @@ BEGIN
 # The Chromebook must be on the "Welcome" screen displayed after a successful powerwash
 # The Chromebook must use an ethernet connection to operate as intended
 # The script was written when v89 was the approved ChromeOS version
+# This script does not work on Chromebooks on v90
 
 # Wait 2 seconds to allow for any USB setup shenanigans
 WAIT 2000
