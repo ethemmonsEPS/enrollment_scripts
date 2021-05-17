@@ -24,7 +24,6 @@ WAIT 2000
 
 # Set starting position 
 CLICK left
-HIT tab
 
 # Open WIFI menu
 HIT alt shift s
@@ -53,8 +52,8 @@ HIT tab
 VWRITE WFPW
 HIT enter
 
-# Wait 10 seconds for wifi to connect
-WAIT 10000
+# Wait 8 seconds for wifi to connect
+WAIT 8000
 
 # Set starting position 
 CLICK left
@@ -63,13 +62,12 @@ HIT tab
 # Move to "Let's go" button and click it
 HIT tab
 HIT tab
-HIT tab
 HIT enter
 
 # Wait 2 second to network options
 WAIT 2000
 
-# Click "Next" button to skip WIFI
+# Click "Next" button
 HIT enter
 
 # Wait 4 seconds for "Google Terms of Service" prompt
@@ -148,7 +146,7 @@ WAIT 30000
 # Check for OS updates
 HIT win
 WAIT 2000
-WRITE check for updates
+WRITE check for update
 HIT enter
 WAIT 2000
 HIT enter
