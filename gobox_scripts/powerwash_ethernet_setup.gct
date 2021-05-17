@@ -2,14 +2,17 @@ VAR USREMAIL,USRPW
 BEGIN
 # VAR and BEGIN must be the first 2 lines of the script
 
-# DATE LAST MODIFIED--5/17/21
-# DESCRIPTION--This script will take a powerwashed Chromebook, login, then open up microphone, webcam, keyboard, and speaker testing websites
+# DATE LAST MODIFIED
+#   5/17/21
+
+# DESCRIPTION
+#   This script will take a powerwashed Chromebook, login, then open up microphone, webcam, keyboard, and speaker testing websites
 
 # REQUIREMENTS
-# The Chromebook must be on the "Welcome" screen displayed after a successful powerwash
-# The Chromebook must use an ethernet connection to operate as intended
-# The script was written when v89 was the approved ChromeOS version
-# This script does not work on Chromebooks on v90
+#   The Chromebook must be on the "Welcome" screen displayed after a successful powerwash
+#   The Chromebook must use an ethernet connection to operate as intended
+#   The script was written when v89 was the approved ChromeOS version
+#   This script does not work on Chromebooks on v90
 
 # Wait 2 seconds to allow for any USB setup shenanigans
 WAIT 2000

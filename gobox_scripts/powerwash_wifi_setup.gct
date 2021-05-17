@@ -4,6 +4,7 @@ BEGIN
 
 # DATE LAST MODIFIED
 #   5/17/21
+
 # DESCRIPTION
 #   This script will take a powerwashed Chromebook, login, then open up microphone, webcam, keyboard, and speaker testing websites
 

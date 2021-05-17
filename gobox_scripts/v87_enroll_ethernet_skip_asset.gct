@@ -2,15 +2,18 @@ VAR ENREMAIL,ENRPW,USREMAIL,USRPW
 BEGIN
 # VAR and BEGIN must be the first 2 lines of the script
 
-# DATE LAST MODIFIED--5/17/21
-# DESCRIPTION--This script will enroll a Chromebook on the "Welcome" out-of-box screen, skipping the asset ID section, and open hardware testing webpages for microphone, webcam, keyboard, and speaker
+# DATE LAST MODIFIED
+#   5/17/21
+
+# DESCRIPTION
+#   This script will enroll a Chromebook on the "Welcome" out-of-box screen, skipping the asset ID section, and open hardware testing webpages for microphone, webcam, keyboard, and speaker
 
 # REQUIREMENTS
-# This script was written for Chromebook shipped with ChromeOS v87 out of the box
-# THE CHROMEBOOK MUST USE AN ETHERNET CONNECTION TO OPERATE AS INTENDED
-# The asset ID prompt will be entered with whatever information is already prefilled, if any
-# Asset ID and Location will have to be entered after enrollment using tools such as Google Admin Control Panel (GCP)
-# This script does not work on Chromebooks on v90
+#   This script was written for Chromebook shipped with ChromeOS v87 out of the box
+#   THE CHROMEBOOK MUST USE AN ETHERNET CONNECTION TO OPERATE AS INTENDED
+#   The asset ID prompt will be entered with whatever information is already prefilled, if any
+#   Asset ID and Location will have to be entered after enrollment using tools such as Google Admin Control Panel (GCP)
+#   This script does not work on Chromebooks on v90
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~ PHASE 1 - Enrolling ~~
