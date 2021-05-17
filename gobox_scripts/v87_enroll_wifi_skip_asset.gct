@@ -1,16 +1,19 @@
-VAR ENREMAIL,ENRPW,USREMAIL,USRPW
+VAR ENREMAIL,ENRPW,USREMAIL,USRPW,WFSSID,WFPW
 BEGIN
 # VAR and BEGIN must be the first 2 lines of the script
 
-# DATE LAST MODIFIED--5/17/21
-# DESCRIPTION--This script will enroll a Chromebook on the "Welcome" out-of-box screen, skipping the asset ID section, and open hardware testing webpages for microphone, webcam, keyboard, and speaker
+# DATE LAST MODIFIED
+#   5/17/21
+
+# DESCRIPTION
+#   This script will enroll a Chromebook on the "Welcome" out-of-box screen, skipping the asset ID section, and open hardware testing webpages for microphone, webcam, keyboard, and speaker
+#   This script was written for deprovisioned Chromebooks (e.g. back from TRA) whose wireless MAC is already approved for the Edina-Devices
 
 # REQUIREMENTS
-# This script was written for Chromebook shipped with ChromeOS v87 out of the box
-# THE CHROMEBOOK MUST USE AN ETHERNET CONNECTION TO OPERATE AS INTENDED
-# The asset ID prompt will be entered with whatever information is already prefilled, if any
-# Asset ID and Location will have to be entered after enrollment using tools such as Google Admin Control Panel (GCP)
-# This script does not work on Chromebooks on v90
+#   THE CHROMEBOOK MUST ALREADY BE APPROVED FOR EDINA-DEVICES TO OPERATE AS INTENDED
+#   The asset ID prompt will be entered with whatever information is already prefilled, if any
+#   Asset ID and Location will have to be entered after enrollment using tools such as Google Admin Control Panel (GCP)
+#   This script has been tested on Chromebooks up to but not including v90
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~ PHASE 1 - Enrolling ~~
@@ -23,13 +26,48 @@ WAIT 2000
 CLICK left
 HIT tab
 
-# Move to "Let's go" button and click it
+# Open WIFI menu
+HIT alt shift s
+HIT tab
+HIT tab
 HIT tab
 HIT tab
 HIT enter
 
-# Wait 1 second to network options
-WAIT 1000
+# Click "add wifi" button
+HIT tab
+HIT tab
+HIT tab
+HIT enter
+
+# Enter WIFI SSID
+VWRITE WFSSID
+
+# Select PSK (Pre-shared key) for security
+HIT tab
+HIT down
+HIT down
+HIT tab
+
+# Enter WIFI password
+VWRITE WFPW
+HIT enter
+
+# Wait 10 seconds for wifi to connect
+WAIT 10000
+
+# Set starting position 
+CLICK left
+HIT tab
+
+# Move to "Let's go" button and click it
+HIT tab
+HIT tab
+HIT tab
+HIT enter
+
+# Wait 2 second to network options
+WAIT 2000
 
 # Click "Next" button to skip WIFI
 HIT enter
