@@ -44,8 +44,8 @@ HIT tab
 HIT ctrl alt e
 HIT enter
 
-# Wait 20 seconds for enrollment to finish
-WAIT 20000
+# Wait 25 seconds for enrollment to finish
+WAIT 25000
 
 # Click "Done" on enrollment screen
 HIT enter

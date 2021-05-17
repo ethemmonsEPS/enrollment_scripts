@@ -63,8 +63,8 @@ WAIT 6000
 VWRITE ENRPW
 HIT enter
 
-# Wait 20 seconds for enrollment to finish
-WAIT 20000
+# Wait 25 seconds for enrollment to finish
+WAIT 25000
 
 # Submit empty asset ID and location field data
 HIT tab
