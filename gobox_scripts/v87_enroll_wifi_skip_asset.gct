@@ -1,0 +1,145 @@
+VAR ENREMAIL,ENRPW,USREMAIL,USRPW
+BEGIN
+# VAR and BEGIN must be the first 2 lines of the script
+
+# DATE LAST MODIFIED--5/17/21
+# DESCRIPTION--This script will enroll a Chromebook on the "Welcome" out-of-box screen, skipping the asset ID section, and open hardware testing webpages for microphone, webcam, keyboard, and speaker
+
+# REQUIREMENTS
+# This script was written for Chromebook shipped with ChromeOS v87 out of the box
+# THE CHROMEBOOK MUST USE AN ETHERNET CONNECTION TO OPERATE AS INTENDED
+# The asset ID prompt will be entered with whatever information is already prefilled, if any
+# Asset ID and Location will have to be entered after enrollment using tools such as Google Admin Control Panel (GCP)
+# This script does not work on Chromebooks on v90
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~ PHASE 1 - Enrolling ~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Wait 2 seconds to allow for any USB setup shenanigans
+WAIT 2000
+
+# Set starting position 
+CLICK left
+HIT tab
+
+# Move to "Let's go" button and click it
+HIT tab
+HIT tab
+HIT enter
+
+# Wait 1 second to network options
+WAIT 1000
+
+# Click "Next" button to skip WIFI
+HIT enter
+
+# Wait 4 seconds for "Google Terms of Service" prompt
+WAIT 4000
+
+# Accept Google ToS
+# Defer update by hitting "enterprise enrollment" key combo
+HIT shift tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT tab
+HIT ctrl alt e
+HIT enter
+
+# Wait 15 seconds for "Enterprise Enrollment" prompt
+WAIT 15000
+
+# Type CB enrollment email from "enrollment email" variable
+VWRITE ENREMAIL
+HIT enter
+
+# Wait 6 seconds to allow for password prompt
+WAIT 6000
+
+# Type CB enrollment password from enrollment password variable
+VWRITE ENRPW
+HIT enter
+
+# Wait 25 seconds for enrollment to finish
+WAIT 25000
+
+# Submit empty asset ID and location field data
+HIT tab
+HIT tab
+HIT tab
+HIT enter
+
+# Wait 2 seconds to allow for information to send
+WAIT 2000
+
+# Click "done" button
+HIT enter
+
+# Wait 5 seconds for login screen
+WAIT 5000
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~ PHASE 2 - Updating and testing ~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Click "sign in with different account"
+CLICK left
+HIT shift tab
+HIT enter
+
+# Wait 5 seconds for email prompt
+WAIT 5000
+
+# Enter CB email
+VWRITE USREMAIL
+HIT enter
+
+# Wait 6 seconds for password prompt
+WAIT 6000
+
+# Enter CB password
+VWRITE USRPW
+HIT enter
+
+# Wait 30 seconds to log in
+WAIT 30000
+
+# Check for OS updates
+HIT win
+WAIT 2000
+WRITE check for updates
+HIT enter
+WAIT 2000
+HIT enter
+WAIT 2000
+
+# Open Google Chrome window
+HIT win
+WAIT 1000
+WRITE chrome
+HIT enter
+
+# Open webcam testing site
+HIT lctrl t
+WRITE webcamtests.com
+HIT enter
+
+# Open microphone testing site
+HIT lctrl t
+WRITE mictests.com
+HIT enter
+
+# Open Youtube and test audio (using Sesame Street's Rubber Ducky song)
+HIT lctrl t
+WRITE youtube.com/watch?v=Mh85R-S-dh8
+HIT enter
+
+# Open keyboard testing site
+HIT lctrl t
+WRITE keyboardchecker.com
+HIT enter
+
+END
