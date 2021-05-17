@@ -2,7 +2,7 @@ VAR USREMAIL,USRPW
 BEGIN
 # VAR and BEGIN must be the first 2 lines of the script
 
-# DATE LAST MODIFIED--5/14/21
+# DATE LAST MODIFIED--5/17/21
 # DESCRIPTION--This script will take a powerwashed Chromebook, login, then open up microphone, webcam, keyboard, and speaker testing websites
 
 # REQUIREMENTS
@@ -72,37 +72,17 @@ WAIT 6000
 VWRITE USRPW
 HIT enter
 
-# Wait 25 seconds to log in
-WAIT 25000
+# Wait 30 seconds to log in
+WAIT 30000
 
-# Open settings window
-HIT alt lshift s
-HIT tab
-HIT tab
-HIT tab
-HIT tab
-HIT enter
-
-# Wait 2 seconds for settings window
+# Check for OS updates
+HIT win
 WAIT 2000
-
-# Navigate to About Chrome OS
-HIT tab
-HIT tab
-HIT tab
-HIT tab
-HIT tab
-HIT tab
-HIT tab
-HIT tab
-HIT tab
-HIT tab
-HIT tab
+WRITE check for updates
 HIT enter
-
-# Click "Check for updates"
-HIT tab
+WAIT 2000
 HIT enter
+WAIT 2000
 
 # Open Google Chrome window
 HIT win
