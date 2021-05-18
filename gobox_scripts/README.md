@@ -6,11 +6,11 @@ The purpose of this script is to take a deprovisioned Chromebook (e.g. returned 
 
 ## powerwash_ethernet_setup.gct
 
-The purpose of this script is to take a Chromebook that has just been powerwashed and to automate the the setup and testing process. The Chromebook will start on the "Welcome" screen displayed after a powerwash, and then the Chromebook will end with several webpages open with hardware testing websites ready to be started.
+The purpose of this script is to take a Chromebook that has just been **powerwashed** and to automate the the setup and testing process. The Chromebook will start on the "Welcome" screen displayed after a powerwash, and then the Chromebook will end with several webpages open with hardware testing websites ready to be started. This script relies on an ethernet connection and will skip over any wifi related screens.
 
 ## powerwash_wifi_setup.gct
 
-The purpose of this script is to take a Chromebook that has just been powerwashed and to set it up and bring up the testing websites. This scripts uses WIFI rather than ethernet. The Chromebook will start on the "Welcome" screen displayed after a powerwash, and then the Chromebook will end with serveral webpages open with hardware testing websites ready to be started.
+The purpose of this script is to take a Chromebook that has just been **powerwashed** and to set it up and bring up the testing websites. This scripts uses WIFI rather than ethernet, therefore the device must already be approved to be on the Edina-Device network. The Chromebook will start on the "Welcome" screen displayed after a powerwash, and then the Chromebook will end with serveral webpages open with hardware testing websites ready to be started.
 
 ## v87_enroll_ethernet_skip_asset.gct
 
