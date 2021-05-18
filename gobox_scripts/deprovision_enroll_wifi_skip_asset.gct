@@ -133,15 +133,15 @@ WAIT 5000
 VWRITE USREMAIL
 HIT enter
 
-# Wait 6 seconds for password prompt
-WAIT 6000
+# Wait 8 seconds for password prompt
+WAIT 8000
 
 # Enter CB password
 VWRITE USRPW
 HIT enter
 
-# Wait 30 seconds to log in
-WAIT 30000
+# Wait 35 seconds to log in
+WAIT 35000
 
 # Check for OS updates
 HIT win
