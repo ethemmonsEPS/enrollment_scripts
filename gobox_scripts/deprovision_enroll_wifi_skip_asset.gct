@@ -22,6 +22,12 @@ BEGIN
 # Wait 2 seconds to allow for any USB setup shenanigans
 WAIT 2000
 
+# Wait 10 seconds for ChromeVox prompt if on v90
+WAIT 10000
+
+# Decline ChromeVox
+HIT esc
+
 # Set starting position 
 CLICK left
 
