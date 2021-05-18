@@ -22,10 +22,8 @@ BEGIN
 # Wait 2 seconds to allow for any USB setup shenanigans
 WAIT 2000
 
-# Wait 10 seconds for ChromeVox prompt if on v90
-WAIT 10000
-
 # Decline ChromeVox
+HIT esc
 HIT esc
 
 # Set starting position 
@@ -120,8 +118,8 @@ WAIT 2000
 # Click "done" button
 HIT enter
 
-# Wait 5 seconds for login screen
-WAIT 5000
+# Wait 7 seconds for login screen
+WAIT 7000
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~ PHASE 2 - Updating and testing ~~
@@ -132,15 +130,15 @@ CLICK left
 HIT shift tab
 HIT enter
 
-# Wait 5 seconds for email prompt
-WAIT 5000
+# Wait 7 seconds for email prompt
+WAIT 7000
 
 # Enter CB email
 VWRITE USREMAIL
 HIT enter
 
-# Wait 8 seconds for password prompt
-WAIT 8000
+# Wait 10 seconds for password prompt
+WAIT 10000
 
 # Enter CB password
 VWRITE USRPW
