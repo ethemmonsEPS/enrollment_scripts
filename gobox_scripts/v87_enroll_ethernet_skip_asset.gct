@@ -93,15 +93,15 @@ CLICK left
 HIT shift tab
 HIT enter
 
-# Wait 5 seconds for email prompt
-WAIT 5000
+# Wait 7 seconds for email prompt
+WAIT 7000
 
 # Enter CB email
 VWRITE USREMAIL
 HIT enter
 
-# Wait 8 seconds for password prompt
-WAIT 8000
+# Wait 10 seconds for password prompt
+WAIT 10000
 
 # Enter CB password
 VWRITE USRPW
