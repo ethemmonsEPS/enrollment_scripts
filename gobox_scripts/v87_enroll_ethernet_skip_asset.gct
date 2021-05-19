@@ -89,9 +89,9 @@ WAIT 5000
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Click "sign in with different account"
-CLICK left
-HIT shift tab
-HIT enter
+# CLICK left
+# HIT shift tab
+# HIT enter
 
 # Wait 7 seconds for email prompt
 WAIT 7000
