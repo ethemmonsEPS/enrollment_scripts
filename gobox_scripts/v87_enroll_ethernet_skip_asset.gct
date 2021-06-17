@@ -52,15 +52,15 @@ HIT tab
 HIT ctrl alt e
 HIT enter
 
-# Wait 15 seconds for "Enterprise Enrollment" prompt
-WAIT 15000
+# Wait 18 seconds for "Enterprise Enrollment" prompt
+WAIT 18000
 
 # Type CB enrollment email from "enrollment email" variable
 VWRITE ENREMAIL
 HIT enter
 
-# Wait 6 seconds to allow for password prompt
-WAIT 6000
+# Wait 7 seconds to allow for password prompt
+WAIT 7000
 
 # Type CB enrollment password from enrollment password variable
 VWRITE ENRPW
